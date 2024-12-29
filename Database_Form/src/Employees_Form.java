@@ -634,10 +634,14 @@ public class Employees_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_AddActionPerformed
 
     private void btn_LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogoutActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showConfirmDialog(null, "Do You Want To Exit");
-        new Login_Form().setVisible(true);
-        dispose();
+        int option = JOptionPane.showConfirmDialog(null, "Do You Want To Exit");
+
+        // Close the employees form and open the login form
+        // only if confirmed to close.
+        if(option == 0) {
+            new Login_Form().setVisible(true);
+            dispose();
+        }
     }//GEN-LAST:event_btn_LogoutActionPerformed
 
     /**
