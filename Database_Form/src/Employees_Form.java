@@ -71,8 +71,13 @@ public class Employees_Form extends javax.swing.JFrame {
     @Override
     public void dispose() {
         try {
-            stmt.close();
-            rs.close();
+            if(stmt != null) {
+                stmt.close();
+            }
+
+            if(rs != null) {
+                rs.close();
+            }
         } catch(SQLException err) {
             JOptionPane.showMessageDialog(this, err.getMessage());
         }
