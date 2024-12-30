@@ -189,7 +189,8 @@ public class Transactions extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_EMPActionPerformed
 
     private void btn_DBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DBActionPerformed
-        // TODO add your handling code here:
+        new Employee_List().setVisible(true);
+        dispose();
     }//GEN-LAST:event_btn_DBActionPerformed
 
     /**
