@@ -64,8 +64,8 @@ public class Employee_List extends javax.swing.JFrame {
      * Method to load data from the database into the JTable.
      */
     private void loadEmployeeData() {
-        String url ="jdbc:derby://localhost:1527/BSCS_C2021_Group16";
-        String user = "ADMIN1";
+        String url ="jdbc:derby://localhost:1527/C:/BSCS_C2021_Group16";
+        String user = "APP";
         String password = "admin1";
 
         String query = "SELECT id, first_name, last_name, job_title FROM Workers";
