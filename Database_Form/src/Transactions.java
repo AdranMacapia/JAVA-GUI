@@ -66,6 +66,11 @@ public class Transactions extends javax.swing.JFrame {
 
         btn_DB.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         btn_DB.setText("DATABASE");
+        btn_DB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_DBActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 10)); // NOI18N
         jButton1.setText("Logout");
@@ -107,7 +112,7 @@ public class Transactions extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(171, 171, 171)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(171, 171, 171))
         );
@@ -128,7 +133,7 @@ public class Transactions extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addGap(0, 0, 0)
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -182,6 +187,10 @@ public class Transactions extends javax.swing.JFrame {
         new Employees_Form().setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_EMPActionPerformed
+
+    private void btn_DBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_DBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_DBActionPerformed
 
     /**
      * @param args the command line arguments

@@ -37,8 +37,8 @@ public class Employees_Form extends javax.swing.JFrame {
     
         try
         {
-             String host ="jdbc:derby://localhost:1527/BSCS_C2021_Group16";
-            String uName = "ADMIN1";
+             String host ="jdbc:derby://localhost:1527/C:/BSCS_C2021_Group16";
+            String uName = "APP";
             String uPass = "admin1";
             con = DriverManager.getConnection(host, uName, uPass);
             
