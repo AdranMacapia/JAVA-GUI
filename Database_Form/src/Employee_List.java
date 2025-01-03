@@ -119,7 +119,6 @@ public class Employee_List extends javax.swing.JFrame {
 
         employeeListPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        employeeListScrollPane.setBackground(new java.awt.Color(255, 255, 255));
         employeeListScrollPane.setMinimumSize(new java.awt.Dimension(550, 320));
         employeeListScrollPane.setPreferredSize(new java.awt.Dimension(550, 320));
         employeeListScrollPane.setRequestFocusEnabled(false);
@@ -167,7 +166,7 @@ public class Employee_List extends javax.swing.JFrame {
                 .addComponent(employeeListScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        employeeListHeaderPanel.setBackground(new java.awt.Color(255, 255, 255));
+        employeeListHeaderPanel.setBackground(new java.awt.Color(225, 78, 66));
 
         employeeListHeaderLabel.setBackground(new java.awt.Color(255, 255, 255));
         employeeListHeaderLabel.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N

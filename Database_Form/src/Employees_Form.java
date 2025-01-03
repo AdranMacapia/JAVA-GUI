@@ -229,6 +229,7 @@ public class Employees_Form extends javax.swing.JFrame {
         btn_SNR.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btn_SNR.setForeground(new java.awt.Color(255, 255, 255));
         btn_SNR.setText("Save New Record");
+        btn_SNR.setEnabled(false);
         btn_SNR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SNRActionPerformed(evt);
@@ -239,6 +240,7 @@ public class Employees_Form extends javax.swing.JFrame {
         btn_CR.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btn_CR.setForeground(new java.awt.Color(255, 255, 255));
         btn_CR.setText("Cancel Record");
+        btn_CR.setEnabled(false);
         btn_CR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_CRActionPerformed(evt);
@@ -285,7 +287,7 @@ public class Employees_Form extends javax.swing.JFrame {
                         .addComponent(btn_last))
                     .addComponent(btn_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(112, 112, 112))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -296,11 +298,11 @@ public class Employees_Form extends javax.swing.JFrame {
                     .addComponent(tf_JT))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(tf_LN, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(tf_FN, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -312,8 +314,8 @@ public class Employees_Form extends javax.swing.JFrame {
                 .addComponent(btn_DR)
                 .addGap(61, 61, 61)
                 .addComponent(btn_CR)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_Logout, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -325,7 +327,7 @@ public class Employees_Form extends javax.swing.JFrame {
                 .addComponent(btn_Logout, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(tf_FN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -352,7 +354,7 @@ public class Employees_Form extends javax.swing.JFrame {
                     .addComponent(btn_DR, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_CR, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_UR, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -597,9 +599,9 @@ public class Employees_Form extends javax.swing.JFrame {
             btn_last.setEnabled(true);
             btn_Add.setEnabled(true);
             btn_SNR.setEnabled(true);
-            btn_CR.setEnabled(true);
-            btn_DR.setEnabled(false);
-            btn_UR.setEnabled(false);
+            btn_CR.setEnabled(false);
+            btn_DR.setEnabled(true);
+            btn_UR.setEnabled(true);
             
             JOptionPane.showMessageDialog(this, "Record Saved");
     }
@@ -637,13 +639,26 @@ public class Employees_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_AddActionPerformed
 
     private void btn_LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogoutActionPerformed
-        int option = JOptionPane.showConfirmDialog(null, "Do You Want To Exit");
+        int option = JOptionPane.showOptionDialog(
+        null, 
+        "Do you want to exit or go back?", 
+        "Logout Confirmation", 
+        JOptionPane.YES_NO_CANCEL_OPTION, 
+        JOptionPane.QUESTION_MESSAGE, 
+        null, 
+        new String[]{"Logout", "Back", "Cancel"}, 
+        "Logout"
+    );
 
-        // Close the employees form and open the login form
-        // only if confirmed to close.
-        if(option == 0) {
-            new Login_Form().setVisible(true);
-            dispose();
+    // Handle the user's selection
+    if(option == JOptionPane.YES_OPTION) {
+        // Logout option - Open login form and close current form
+        new Login_Form().setVisible(true);
+        dispose();
+    } else if(option == JOptionPane.NO_OPTION) {
+        // Back option - Return to the transaction page
+        new Transactions().setVisible(true); // Replace `TransactionPage` with the actual transaction page class
+        dispose();
         }
     }//GEN-LAST:event_btn_LogoutActionPerformed
 
