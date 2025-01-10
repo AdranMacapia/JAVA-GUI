@@ -45,7 +45,6 @@ public class Login_Form extends javax.swing.JFrame {
         btn_Cancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(550, 350));
         setMinimumSize(new java.awt.Dimension(550, 350));
         setResizable(false);
         setSize(new java.awt.Dimension(550, 350));
@@ -246,6 +245,7 @@ public class Login_Form extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void pw_PActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pw_PActionPerformed

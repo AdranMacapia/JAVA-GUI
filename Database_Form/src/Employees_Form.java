@@ -369,6 +369,7 @@ public class Employees_Form extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tf_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_idActionPerformed
@@ -598,7 +599,7 @@ public class Employees_Form extends javax.swing.JFrame {
             btn_next.setEnabled(true);
             btn_last.setEnabled(true);
             btn_Add.setEnabled(true);
-            btn_SNR.setEnabled(true);
+            btn_SNR.setEnabled(false);
             btn_CR.setEnabled(false);
             btn_DR.setEnabled(true);
             btn_UR.setEnabled(true);

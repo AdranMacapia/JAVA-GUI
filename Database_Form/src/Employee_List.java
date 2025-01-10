@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author RANJEESH
+ * @author Adrian
  */
 public class Employee_List extends javax.swing.JFrame {
     /**
@@ -217,6 +217,7 @@ public class Employee_List extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void headerBackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_headerBackBtnActionPerformed
